@@ -18,12 +18,77 @@
   </li>
 </ul>
 
-<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" height="300" width="300">
-  <a href="http://www.google.com" title="This is a title" class="mycircle" >
-  <circle cx="50" cy="50" r="20" stroke="black" stroke-width="3" fill="red" />
-  </a>
-  Sorry, your browser does not support inline SVG.  
-  <text x="10" y="10">This is some text</text>
-</svg> 
+<input title='This title' width="200">
+
+
+<svg viewBox="0 0 400 300">
+  <g id="circle-group" 
+     transform="rotate(10) translate(20,-5)">
+    
+      <circle r="25" cx="50" cy="50" fill="red"/>
+      <g class="tooltip css" transform="translate(50,50)">
+        <rect x="-3em" y="-45" width="6em" height="1.25em"/>
+        <text y="-45" dy="1em" text-anchor="middle" fill="red">
+          SVG/CSS Tip</text>
+      </g>
+    
+      <circle r="25" cx="200" cy="50" fill="LightSeaGreen"/>
+      <g class="tooltip css" transform="translate(200,50)">
+        <rect x="-3em" y="-45" width="6em" height="1.25em"/>
+        <text y="-45" dy="1em" text-anchor="middle" fill="LightSeaGreen">
+          SVG/CSS Tip</text>
+      </g>
+    
+      <circle r="25" cx="350" cy="50" fill="orange"/>
+      <g class="tooltip css" transform="translate(350,50)">
+        <rect x="-3em" y="-45" width="6em" height="1.25em"/>
+        <text y="-45" dy="1em" text-anchor="middle" fill="orange">
+          SVG/CSS Tip</text>
+      </g>
+    
+      <circle r="25" cx="50" cy="200" fill="cornflowerblue"/>
+      <g class="tooltip css" transform="translate(50,200)">
+        <rect x="-3em" y="-45" width="6em" height="1.25em"/>
+        <text y="-45" dy="1em" text-anchor="middle" fill="cornflowerblue">
+          SVG/CSS Tip</text>
+      </g>
+    
+      <circle r="25" cx="200" cy="200" fill="DarkOrchid"/>
+      <g class="tooltip css" transform="translate(200,200)">
+        <rect x="-3em" y="-45" width="6em" height="1.25em"/>
+        <text y="-45" dy="1em" text-anchor="middle" fill="DarkOrchid">
+          SVG/CSS Tip</text>
+      </g>
+    
+      <circle r="25" cx="350" cy="200" fill="ForestGreen"/>
+      <g class="tooltip css" transform="translate(350,200)">
+        <rect x="-3em" y="-45" width="6em" height="1.25em"/>
+        <text y="-45" dy="1em" text-anchor="middle" fill="ForestGreen">
+          SVG/CSS Tip</text>
+      </g>
+      
+  </g>
+  <g transform="scale(1.2)">
+      <g class="tooltip exact">
+          <rect width="4em" height="1.25em"/>
+          <text dy="1em" x="2em" text-anchor="middle">
+            SVG Tip</text>
+      </g>
+  </g>
+  <g transform="scale(0.9)">
+      <g class="tooltip mouse">
+          <!-- The rectangle and text are positioned 
+               to the right and above the <g> element's
+               0,0 point, purely to help with all the 
+               overlapping tooltips! -->
+        <rect width="7em" height="2.5em"  
+                x="-7em" y="-2.5em"/>
+        <text x="-3.5em" y="-2.5em" text-anchor="middle">
+          <tspan dy="1em">Mouse-tracking</tspan>
+          <tspan x="-3.5em" dy="1.25em">SVG Tip</tspan>
+        </text>
+      </g>
+  </g>
+</svg>
 
 <router-outlet></router-outlet>
